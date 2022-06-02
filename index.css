@@ -1,0 +1,103 @@
+/* start styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #444;
+  font-family: 'Poppins';
+}
+li,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+main {
+  padding: 140px 40px 40px;
+  color: #bbb;
+}
+
+/* common */
+
+.menu-icon div,
+nav {
+  transition: all 0.2s ease-in;
+}
+
+/* Header */
+header {
+  position: fixed;
+  z-index: 2;
+  padding: 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0, 0, 0, 0.2);
+}
+
+header h1 {
+  color: white;
+  text-align: right;
+  margin: 0;
+}
+
+/* Icon */
+.menu-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 40px;
+  height: 2px;
+  background: white;
+}
+
+.menu-icon div {
+  margin-bottom: 5px;
+}
+
+.menu-icon.show div:first-child {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.menu-icon.show div:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.menu-icon.show div:last-child {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* Nav */
+nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+
+  left: -200px;
+
+  bottom: 0;
+  background: rgb(0, 0, 0, 1);
+  padding-left: 40px;
+  width: 200px;
+}
+
+nav.show {
+  left: 0px;
+}
+
+nav ul {
+  margin-top: 150px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 20px;
+}
